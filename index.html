@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raffle Spin Wheel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img
+      class="logo-phonetastik"
+      src="https://phonetastik.de/media/25/a1/86/1739803820/Phonetastik_Logo.png"
+      alt=""
+    />
+    <div class="container">
+      <div>
+        <h1>Raffle Spin Wheel</h1>
+        <input type="file" id="csvFile" accept=".csv" />
+        <button onclick="loadCSV()">Load Entries</button>
+        <div class="wheel-container">
+          <div class="wheel-pointer"></div>
+          <canvas id="wheel" width="350" height="350"></canvas>
+          <button class="spin-button" onclick="spinWheel()">SPIN</button>
+        </div>
+        <p id="winner">Winner will be displayed here</p>
+      </div>
+      <div class="entries-container">
+        <h3>Entries List</h3>
+        <ul class="entry-list" id="entryList"></ul>
+      </div>
+    </div>
+
+    <div id="winnerModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img
+          class="modal-logo"
+          src="https://phonetastik.de/media/25/a1/86/1739803820/Phonetastik_Logo.png"
+          alt="Logo"
+        />
+        <p class="modal-text">The winner of the raffle is:</p>
+        <p id="modalContent"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
