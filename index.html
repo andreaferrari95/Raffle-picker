@@ -14,7 +14,7 @@
     />
     <div class="container">
       <div>
-        <h1>Raffle Spin Wheel</h1>
+        <h1>Glücksrad</h1>
         <input type="file" id="csvFile" accept=".csv" />
         <button onclick="loadCSV()">Load Entries</button>
         <div class="wheel-container">
@@ -22,7 +22,7 @@
           <canvas id="wheel" width="350" height="350"></canvas>
           <button class="spin-button" onclick="spinWheel()">SPIN</button>
         </div>
-        <p id="winner">Winner will be displayed here</p>
+        <p id="winner">Der Gewinner ist</p>
       </div>
       <div class="entries-container">
         <h3>Entries List</h3>
@@ -38,7 +38,7 @@
           src="https://phonetastik.de/media/25/a1/86/1739803820/Phonetastik_Logo.png"
           alt="Logo"
         />
-        <p class="modal-text">The winner of the raffle is:</p>
+        <p class="modal-text">Der Gewinner ist:</p>
         <p id="modalContent"></p>
       </div>
     </div>
